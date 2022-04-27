@@ -51,5 +51,5 @@ COPY --from=build /out/filecoin /
 FROM bin-unix as bin
 COPY --from=base /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
-ENTRYPOINT [ "./Vault-API-Filecoin" ]
+ENTRYPOINT [ "./filecoin" ]
 EXPOSE 8080
