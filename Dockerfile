@@ -14,7 +14,6 @@ COPY go.* ./
 ARG github_user
 ARG github_personal_token
 RUN apk add --no-cache git
-RUN git config --global url."https://${github_user}:${github_personal_token}@github.com".insteadOf "https://github.com"
 RUN --mount=type=cache,target=/go/pkg/mod \
     go mod download
 
